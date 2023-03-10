@@ -11,6 +11,7 @@ const StyledDiv = styled.div`
 const App = () => {
   const { register, getValues, handleSubmit } = useForm();
   const [result, setResult] = useState();
+  const [recommendation, setRecommendation] = useState();
 
   async function search() {
     const foodName = getValues("food");
@@ -19,6 +20,15 @@ const App = () => {
     );
     console.log(response.data.results);
     setResult(response.data.results);
+  }
+
+  async function recommend() {
+    const foodName = getValues("food");
+    const response = await Axios.get(
+      "http://127.0.0.1:5000/reciperm?query=" + foodName
+    );
+    console.log(response.data.choices[0].message.content);
+    setRecommendation(response.data.choices[0].message.content);
   }
 
   return (
@@ -89,8 +99,10 @@ const App = () => {
             </table>
           </div>
         )}
-        <p>this is a new table</p>
-        <div>hi??</div>
+        <div>
+          <button onClick={handleSubmit(recommend)}>Get Recommendation</button>
+        </div>
+        <p>{recommendation}</p>
       </div>
     </StyledDiv>
   );

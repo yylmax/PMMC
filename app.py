@@ -1,6 +1,6 @@
-
 from flask import Flask, jsonify, request, render_template
 import requests
+import openai
 
 
 app = Flask(__name__, static_url_path='', static_folder='foodapp/build')
@@ -22,6 +22,19 @@ def get_recipe():
     url = f"https://api.spoonacular.com/recipes/complexSearch?apiKey={api_key}&query={ingredient}&number={number}"
     response = requests.get(url)
     data = response.json()
+    return jsonify(data)
+
+
+@app.route("/reciperm", methods=["GET"])
+def get_recipe2():
+    ingredient = request.args.get("query")
+    openai.api_key = "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"
+
+    data = openai.ChatCompletion.create(
+      model="gpt-3.5-turbo",
+      messages=[{"role": "system", "content": "can I have some menu for " + ingredient + "?"}]
+    )
+
     return jsonify(data)
 
 
