@@ -16,11 +16,13 @@ const App = () => {
   const [user, setUser] = useState();
 
   useEffect(() => {
-    const userName = JSON.parse(localStorage.getItem("user"));
+    const userName = JSON.parse(localStorage.getItem("userId"));
     if (userName) {
       setUser(userName);
     }
   }, []);
+
+  //这个改成用一个button来取得当前login 的 userid
 
   async function search() {
     const foodName = getValues("food");
@@ -71,6 +73,7 @@ const App = () => {
 
   return (
     <StyledDiv>
+      <div>The current userId: {user}</div>
       <div className="container-md text-center">
         <h1 style={{ fontSize: "5rem" }}>Fancy Food Angel</h1>
       </div>

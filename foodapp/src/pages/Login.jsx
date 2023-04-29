@@ -11,7 +11,7 @@ const Login = () => {
   const { register, getValues, handleSubmit } = useForm();
   const navigate = useNavigate();
 
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(100);
 
   const moveToHome = () => {
     navigate("/");
@@ -19,7 +19,18 @@ const Login = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(user));
+    // if (user == undefined) {
+    //   console.log("no input user");
+    // } else {
+    //   const data = window.localStorage.getItem("user");
+    //   setUser(JSON.parse(data));
+    // }
+    const data = window.localStorage.getItem("userId");
+    setUser(JSON.parse(data));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("userId", JSON.stringify(user));
   }, [user]);
 
   async function changeUser() {
@@ -29,9 +40,6 @@ const Login = () => {
     const response = await Axios.post(
       "http://127.0.0.1:5000/login?username=" + userName
     );
-
-    navigate("/");
-    console.log("success move to home");
   }
 
   return (
@@ -44,8 +52,7 @@ const Login = () => {
         <input
           {...register("email")}
           className={styles["form-input"]}
-          type={"email"}
-          placeholder="Email"
+          type={"number"}
         />
         <button
           className={styles["form-button"]}
