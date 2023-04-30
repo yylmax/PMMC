@@ -3,9 +3,12 @@ import requests
 import openai
 import store
 import os
+import random
+from flask_cors import CORS
 
 
 app = Flask(__name__, static_url_path='', static_folder='foodapp/build')
+CORS(app)
 
 @app.route("/")
 def index():
@@ -18,6 +21,10 @@ def indexlogin():
 
 @app.route("/login", methods=["GET"])
 def Userlogin():
+    return app.send_static_file('index.html')
+
+@app.route("/game1")
+def indexGame():
     return app.send_static_file('index.html')
 
 
@@ -58,6 +65,30 @@ def get_recipe2():
     )
 
     return jsonify(data)
+
+# game 1 backend
+options = {
+    "A": "https://via.placeholder.com/150x150.png?text=A",
+    "B": "https://via.placeholder.com/150x150.png?text=B",
+    "C": "https://via.placeholder.com/150x150.png?text=C",
+    "D": "https://via.placeholder.com/150x150.png?text=D"
+}
+
+answer = random.choice(list(options.keys()))
+
+@app.route('/game')
+def game():
+    return render_template('index2.html', options=options)
+
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    user_answer = request.form['answer']
+    if user_answer == answer:
+        result = "Correct!"
+    else:
+        result = "Wrong!"
+    return jsonify({'result': result, 'answer': answer})
 
 
 if __name__ == "__main__":

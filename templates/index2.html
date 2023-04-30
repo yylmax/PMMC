@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python 网页小游戏</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>请选择正确的图片：</h1>
+    <div id="options">
+      {% for key, value in options.items() %}
+      <label>
+        <input
+          type="radio"
+          name="answer"
+          value="{{ key }}"
+        />
+        <img src="{{ value }}" />
+      </label>
+      {% endfor %}
+    </div>
+    <button id="submit-btn">提交</button>
+    <div id="result"></div>
+    <script>
+      $(function () {
+        $("#submit-btn").click(function () {
+          var answer = $('input[name="answer"]:checked').val();
+          if (answer) {
+            $.ajax({
+              url: "/submit",
+              method: "POST",
+              data: { answer: answer },
+              success: function (data) {
+                $("#result").text(data.result + " 正确答案是：" + data.answer);
+              },
+            });
+          }
+        });
+      });
+    </script>
+    <button id="my-button">跳转到 /about 路由</button>
+
+    <script>
+      const button = document.getElementById("my-button");
+      button.addEventListener("click", function () {
+        window.location.href = "/";
+      });
+    </script>
+  </body>
+</html>

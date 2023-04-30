@@ -14,6 +14,7 @@ const App = () => {
   const [recommendation, setRecommendation] = useState();
 
   const [user, setUser] = useState();
+  const [userPoint, setUserPoint] = useState(0);
 
   useEffect(() => {
     const userName = JSON.parse(localStorage.getItem("userId"));
@@ -22,7 +23,7 @@ const App = () => {
     }
   }, []);
 
-  //这个改成用一个button来取得当前login 的 userid
+  // 自动抓取localstorage的userId
 
   async function search() {
     const foodName = getValues("food");
@@ -74,6 +75,7 @@ const App = () => {
   return (
     <StyledDiv>
       <div>The current userId: {user}</div>
+      <div>The current userPoint: {userPoint}</div>
       <div className="container-md text-center">
         <h1 style={{ fontSize: "5rem" }}>Fancy Food Angel</h1>
       </div>
