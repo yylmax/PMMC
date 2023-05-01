@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request, render_template
 import requests
-import openai
 import store
 import os
 import random
