@@ -10,7 +10,7 @@ const NavBar = () => {
           className="navbar-brand"
           href="#"
         >
-          FFA
+          PMPC
         </a>
         <button
           className="navbar-toggler"

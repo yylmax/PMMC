@@ -2,6 +2,8 @@ import os
 import json
 from collections import defaultdict
 
+
+# 这里需要大改，每个user需要自己对应的point
 def checkExistence(query,userName):
     root = os.getcwd()
     directory = "FoodSearched"
