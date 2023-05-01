@@ -14,6 +14,8 @@ const App = () => {
   const [user, setUser] = useState();
   const [userPoint, setUserPoint] = useState(0);
 
+  // hahaha
+
   // 自动抓取localstorage的userId
   useEffect(() => {
     const userName = JSON.parse(localStorage.getItem("userId"));
