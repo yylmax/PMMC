@@ -30,7 +30,9 @@
               method: "POST",
               data: { answer: answer },
               success: function (data) {
-                $("#result").text(data.result + " 正确答案是：" + data.answer);
+                $("#result").text(
+                  data.result + " Correct Answer is " + data.answer
+                );
               },
             });
           }
