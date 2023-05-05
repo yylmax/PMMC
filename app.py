@@ -1,13 +1,12 @@
 from flask import Flask, jsonify, request, render_template
 import requests
-import openai
 import store
 import os
 import random
 from flask_cors import CORS
+#dddd
 
-
-app = Flask(__name__, static_url_path='', static_folder='foodapp/build')
+app = Flask(__name__, static_url_path='', static_folder='foodapp/build', template_folder='templates')
 CORS(app)
 
 @app.route("/")
@@ -25,10 +24,10 @@ def Userlogin():
 
 # game 1 backend
 options = {
-    "A": "https://via.placeholder.com/150x150.png?text=A",
-    "B": "https://via.placeholder.com/150x150.png?text=B",
-    "C": "https://via.placeholder.com/150x150.png?text=C",
-    "D": "https://via.placeholder.com/150x150.png?text=D"
+    "A": "https://northcoastmmc.org/wp-content/uploads/2010/04/29748_394524522711_695967711_4377087_2275354_n.jpg",
+    "B": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Humpback_Whale_underwater_shot.jpg/300px-Humpback_Whale_underwater_shot.jpg",
+    "C": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUsGolBuFlC7LNoSmhsnG_ZWgzeM_C_40yyQ&usqp=CAU",
+    "D": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwqTk3fgbj-asLnwgd3LiIRYaPGV2aTtO5MQ&usqp=CAU"
 }
 
 answer = random.choice(list(options.keys()))
@@ -43,6 +42,7 @@ def submit():
     user_answer = request.form['answer']
     if user_answer == answer:
         result = "Correct!"
+        
     else:
         result = "Wrong!"
     return jsonify({'result': result, 'answer': answer})

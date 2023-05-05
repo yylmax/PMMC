@@ -9,7 +9,7 @@ import Axios from "axios";
 
 const Login = () => {
   const { register, getValues, handleSubmit } = useForm();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const [user, setUser] = useState(100);
 
