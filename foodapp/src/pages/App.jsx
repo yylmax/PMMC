@@ -27,7 +27,7 @@ const App = () => {
   return (
     <StyledDiv>
       <header>The current userId: {user}</header>
-      <header>The current user Reward Point: {userPoint}</header>
+      <header>The current user Reward Point1: {userPoint}</header>
 
       <div className="container-md text-center">
         <h1 style={{ fontSize: "5rem" }}>Interactive Mini Games for Kids</h1>
