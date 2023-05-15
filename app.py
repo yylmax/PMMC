@@ -22,6 +22,10 @@ def indexlogin():
 def Userlogin():
     return app.send_static_file('index.html')
 
+@app.route("/intro", methods=["GET"])
+def UserIntro():
+    return app.send_static_file('index.html')
+
 # game 1 backend
 options = {
     "A": "https://northcoastmmc.org/wp-content/uploads/2010/04/29748_394524522711_695967711_4377087_2275354_n.jpg",
