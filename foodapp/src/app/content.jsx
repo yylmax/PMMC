@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import App from "../pages/App";
 import Login from "../pages/Login";
+import Intro from "../pages/Intro";
 
 const Content = () => {
   return (
@@ -15,6 +16,10 @@ const Content = () => {
         <Route
           path="/login"
           element={<Login />}
+        />
+        <Route
+          path="/intro"
+          element={<Intro />}
         />
       </Routes>
     </div>
