@@ -12,7 +12,7 @@
           url: "/submit",
           type: "GET",
           success: function(response) {
-            $("#answer-container").text(response);
+            $("#answer-container").text('Please select the image of ' + response);
           },
           error: function(error) {
             console.log(error);
