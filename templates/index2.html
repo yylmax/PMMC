@@ -6,7 +6,21 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
-    <h1>Please select a picture of a whale.</h1>
+    <script>
+      $(document).ready(function() {
+        $.ajax({
+          url: "/submit",
+          type: "GET",
+          success: function(response) {
+            $("#answer-container").text(response);
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
+    </script>
+    <h1 id="answer-container"></h1> 
     <div id="options">
       {% for key, value in options.items() %}
       <label>
@@ -31,52 +45,11 @@
               method: "POST",
               data: { answer: answer },
               success: function (data) {
-                $("#result").text(data.result + " 正确答案是：" + data.answer);
+                $("#result").text(data.result + " The correct answer: " + data.answer);
               },
             });
           }
         });
-      });
-    </script>
-<h1>Please select a picture of a whale.</h1>
-<div id="options">
-  {% for key, value in options.items() %}
-  <label>
-    <input
-      type="radio"
-      name="answer"
-      value="{{ key }}"
-    />
-    <img src="{{ value }}" />
-  </label>
-  {% endfor %}
-</div>
-<button id="submit-btn">submit</button>
-<div id="result"></div>
-<script>
-  $(function () {
-    $("#submit-btn").click(function () {
-      var answer = $('input[name="answer"]:checked').val();
-      if (answer) {
-        $.ajax({
-          url: "/submit",
-          method: "POST",
-          data: { answer: answer },
-          success: function (data) {
-            $("#result").text(data.result + " 正确答案是：" + data.answer);
-          },
-        });
-      }
-    });
-  });
-</script>
-
-    <button id="my-button">jump to main page</button>
-
-    <script>
-      const button = document.getElementById("my-button");
-      button.addEventListener("click", function () {
-        window.location.href = "/";
       });
     </script>
   </body>
