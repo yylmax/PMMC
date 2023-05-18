@@ -1,0 +1,16 @@
+#introHeader {
+    text-align: center;
+    background-color: pink;
+    padding: 20px;
+}
+
+#introPic {
+    margin: 0 20% 0 20%;
+}
+
+.mammalIntro {
+    text-align: center;
+    background-color: blanchedalmond;
+    padding: 5% 15% 5% 15%;
+}
+
