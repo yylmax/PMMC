@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+    <link
+      href="{{ url_for('static', filename='style.css') }}"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>Python webgame</title>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
         $.ajax({
           url: "/submit",
           type: "GET",
-          success: function(response) {
-            $("#answer-container").text('Please select the image of ' + response);
+          success: function (response) {
+            $("#answer-container").text(
+              "Please select the image of " + response
+            );
           },
-          error: function(error) {
+          error: function (error) {
             console.log(error);
-          }
+          },
         });
       });
     </script>
-    <h1 id="answer-container"></h1> 
+    <h1 id="answer-container"></h1>
     <div id="options">
       {% for key, value in options.items() %}
       <label>
@@ -45,13 +51,13 @@
               method: "POST",
               data: { answer: answer },
               success: function (data) {
-<<<<<<< HEAD
                 $("#result").text(
                   data.result + " Correct Answer is " + data.answer
                 );
-=======
-                $("#result").text(data.result + " The correct answer: " + data.answer);
->>>>>>> victro_try1
+
+                $("#result").text(
+                  data.result + " The correct answer: " + data.answer
+                );
               },
             });
           }

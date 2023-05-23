@@ -24,7 +24,7 @@ def indexlogin():
 def Userlogin():
     return app.send_static_file('index.html')
 
-<<<<<<< HEAD
+
 @app.route("/intro", methods=["GET"])
 def UserIntro():
     return app.send_static_file('index.html')
@@ -36,8 +36,7 @@ options = {
     "C": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUsGolBuFlC7LNoSmhsnG_ZWgzeM_C_40yyQ&usqp=CAU",
     "D": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwqTk3fgbj-asLnwgd3LiIRYaPGV2aTtO5MQ&usqp=CAU"
 }
-=======
->>>>>>> victro_try1
+
 
 options = {}
 correct_answer = ''
