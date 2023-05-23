@@ -24,19 +24,9 @@ def indexlogin():
 def Userlogin():
     return app.send_static_file('index.html')
 
-
 @app.route("/intro", methods=["GET"])
 def UserIntro():
     return app.send_static_file('index.html')
-
-# game 1 backend
-options = {
-    "A": "https://northcoastmmc.org/wp-content/uploads/2010/04/29748_394524522711_695967711_4377087_2275354_n.jpg",
-    "B": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Humpback_Whale_underwater_shot.jpg/300px-Humpback_Whale_underwater_shot.jpg",
-    "C": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUsGolBuFlC7LNoSmhsnG_ZWgzeM_C_40yyQ&usqp=CAU",
-    "D": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwqTk3fgbj-asLnwgd3LiIRYaPGV2aTtO5MQ&usqp=CAU"
-}
-
 
 options = {}
 correct_answer = ''
