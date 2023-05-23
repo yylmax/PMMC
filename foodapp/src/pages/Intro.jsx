@@ -20,11 +20,10 @@ const Intro = () => {
 
             <div class="imessage">
               <p class="from-them">
-                It was loud. We just laid there and said &ldquo;is this an
-                earthquake? I think this is an earthquake.&rdquo;
+                Marine Mammal Fun Facts &ldquo;California Sea Lions: .&rdquo;
               </p>
               <p class="from-me">
-                Like is this an earthquake just go back to sleep
+                Have tiny ear flaps sticking out of their head
               </p>
               <p class="from-them margin-b_one">
                 It&rsquo;s more like &ldquo;this is an earthquake. Check the
