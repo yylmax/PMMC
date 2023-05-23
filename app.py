@@ -8,7 +8,7 @@ from flask_cors import CORS
 import game1
 #dddd
 
-app = Flask(__name__, static_url_path='', static_folder='foodapp/build', template_folder='templates')
+app = Flask(__name__, static_url_path='', static_folder='templates/css', template_folder='templates')
 CORS(app)
 
 @app.route("/")
