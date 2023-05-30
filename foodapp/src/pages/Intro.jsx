@@ -7,35 +7,8 @@ import introImage from "../assets/pic1.JPG";
 const Intro = () => {
   return (
     <>
-      <div>
-        <h1 id="introHeader">Introduction Page</h1>
-      </div>
+      <h1 id="introHeader">Introduction Page</h1>
       <body>
-        <section>
-          <div class="container">
-            <p class="comment">
-              This begins one morning with my friend in San Diego telling me
-              about an earthquake they just had.
-            </p>
-
-            <div class="imessage">
-              <p class="from-them">
-                Marine Mammal Fun Facts &ldquo;California Sea Lions: .&rdquo;
-              </p>
-              <p class="from-me">
-                Have tiny ear flaps sticking out of their head
-              </p>
-              <p class="from-them margin-b_one">
-                It&rsquo;s more like &ldquo;this is an earthquake. Check the
-                Internet. Yup. Earthquake. This is the size. This is the
-                epicenter. Check social media. Make sure the East Coast knows
-                I&rsquo;m alive. Okay, try and go back to sleep.&rdquo;
-              </p>
-              <p class="from-me no-tail emoji">👍🏻</p>
-              <p class="from-me">Glad you&rsquo;re safe</p>
-            </div>
-          </div>
-        </section>
         <section className="mammalIntro">
           <img
             id="introPic"
@@ -71,15 +44,40 @@ const Intro = () => {
             <br />
           </p>
         </section>
+        <section class="imessageFunFact">
+          <div class="container">
+            <p class="comment">Fun Facts About California Sea Lions:</p>
+            <div class="container">
+              <div class="imessage">
+                <p class="from-them">
+                  You know some fun facts about Marine Mammal &ldquo;California
+                  Sea Lions.&rdquo; ?
+                </p>
+                <p class="from-me">
+                  They have tiny ear flaps sticking out of their head
+                </p>
+                <p class="from-them margin-b_one">
+                  Interesting! Give me one more fun fact!
+                </p>
+                <p class="from-me no-tail emoji">👍🏻</p>
+                <p class="from-me">Can walk on all four flippers on land</p>
+                <p class="from-me">
+                  Swim using their very large front flippers
+                </p>
+                <p class="from-them">Any difference between male and female?</p>
+                <p class="from-me">
+                  Sure! Males are dark brown when dry, and Females are blond
+                  when dry.
+                </p>
+                <p class="from-me">Hello </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <section>
           <h2>Marine Mammal Fun Facts</h2>
           <p>California Sea Lions: </p>
           <ul>
-            <li>Have tiny ear flaps sticking out of their head</li>
-            <li>Can walk on all four flippers on land</li>
-            <li>Swim using their very large front flippers</li>
-            <li>Males are dark brown when dry</li>
-            <li>Females are blond when dry</li>
             <li>Can hold their breath up to 10 minutes</li>
             <li>Most sea lions are born in the month of June</li>
             <li>Pups nurse from their mothers for 6 to 11 months</li>
