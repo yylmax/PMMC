@@ -13,7 +13,7 @@ const Point = () => {
   }, []);
 
   return (
-    <div class="card">
+    <div class="card1">
       <img
         src="https://media.istockphoto.com/id/1301667498/photo/humpback-whale-playfully-swimming-in-clear-blue-ocean.webp?b=1&s=170667a&w=0&k=20&c=vKyaDp8hUrXXTuNNZEKKJODtI9r-az8X3-HyIgbIrJ4="
         class="card__image"
