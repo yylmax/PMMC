@@ -5,7 +5,8 @@ import store
 import os
 import random
 from flask_cors import CORS
-import game1
+import game1 as g1
+import game2 as g2
 #dddd
 
 app = Flask(__name__, static_url_path='', static_folder='foodapp/build', template_folder='templates')
@@ -33,19 +34,30 @@ correct_answer = ''
 idx = 0
 
 
-@app.route('/game')
-def game():
+@app.route('/game1')
+def game1():
     global options
     global correct_answer
     global idx
-    game = game1.Game1()
-    options, correct_answer, idx = game.game1_backend()
+    gm1 = g1.Game1()
+    options, correct_answer, idx = gm1.game1_backend()
     return render_template('index2.html', options=options)
+
 
 @app.route('/game3')
 def game3():
     return app.send_static_file('index.html')
 
+
+
+'''@app.route('/game2')
+def game2():
+    global options
+    global correct_answer
+    global idx
+    gm2 = g2.Game2()
+    options, correct_answer, idx = gm2.game2_backend()
+    return render_template('index3.html', options=options)'''
 
 
 
