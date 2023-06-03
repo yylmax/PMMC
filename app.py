@@ -8,7 +8,7 @@ from flask_cors import CORS
 import game1
 #dddd
 
-app = Flask(__name__, static_url_path='', static_folder='templates/css', template_folder='templates')
+app = Flask(__name__, static_url_path='', static_folder='foodapp/build', template_folder='templates')
 CORS(app)
 
 @app.route("/")
@@ -41,6 +41,12 @@ def game():
     game = game1.Game1()
     options, correct_answer, idx = game.game1_backend()
     return render_template('index2.html', options=options)
+
+@app.route('/game3')
+def game3():
+    return app.send_static_file('index.html')
+
+
 
 
 @app.route('/submit', methods=['POST', 'GET'])
