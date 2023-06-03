@@ -8,6 +8,7 @@ const Intro = () => {
   return (
     <>
       <h1 id="introHeader">Introduction Page</h1>
+      <p>hello i am alethia</p>
       <body>
         <section className="mammalIntro">
           <img
