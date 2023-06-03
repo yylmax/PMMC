@@ -43,6 +43,13 @@ def game1():
     options, correct_answer, idx = gm1.game1_backend()
     return render_template('index2.html', options=options)
 
+
+@app.route('/game3')
+def game3():
+    return app.send_static_file('index.html')
+
+
+
 '''@app.route('/game2')
 def game2():
     global options
@@ -51,6 +58,7 @@ def game2():
     gm2 = g2.Game2()
     options, correct_answer, idx = gm2.game2_backend()
     return render_template('index3.html', options=options)'''
+
 
 
 @app.route('/submit', methods=['POST', 'GET'])
