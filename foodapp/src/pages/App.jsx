@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 
 import Point from "./Point";
 import Education from "./Education";
+import Card from "./Card";
 
 // const StyledDiv = styled.div`
 //   display: flex;
@@ -31,6 +32,7 @@ const App = () => {
     <>
       <Point />
       <Education />
+      <Card />
     </>
   );
 };

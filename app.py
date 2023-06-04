@@ -9,7 +9,8 @@ import game1 as g1
 import game2 as g2
 #dddd
 
-app = Flask(__name__, static_url_path='', static_folder='foodapp/build', template_folder='templates')
+app = Flask(__name__)
+            #, static_url_path='', static_folder='static', template_folder='templates')
 CORS(app)
 
 @app.route("/")
@@ -29,50 +30,61 @@ def Userlogin():
 def UserIntro():
     return app.send_static_file('index.html')
 
-options = {}
-correct_answer = ''
-idx = 0
+options1 = {}
+correct_answer1 = ''
+idx1 = 0
+options2 = {}
+correct_answer2 = ''
+idx2 = 0
 
 
 @app.route('/game1')
 def game1():
-    global options
-    global correct_answer
-    global idx
+    global options1
+    global correct_answer1
+    global idx1
     gm1 = g1.Game1()
-    options, correct_answer, idx = gm1.game1_backend()
-    return render_template('index2.html', options=options)
+    options1, correct_answer1, idx1 = gm1.game1_backend()
+    return render_template('index2.html', options=options1)
 
 
-@app.route('/game3')
-def game3():
-    return app.send_static_file('index.html')
-
-
-
-'''@app.route('/game2')
+@app.route('/game2')
 def game2():
-    global options
-    global correct_answer
-    global idx
+    global options2
+    global correct_answer2
+    global idx2
     gm2 = g2.Game2()
-    options, correct_answer, idx = gm2.game2_backend()
-    return render_template('index3.html', options=options)'''
+    options2, correct_answer2, idx2 = gm2.game2_backend()
+    return render_template('index3.html', options=options2)
 
 
 
-@app.route('/submit', methods=['POST', 'GET'])
-def submit():
-    global options
-    global correct_answer
-    global idx
+@app.route('/submit1', methods=['POST', 'GET'])
+def submit1():
+    global options1
+    global correct_answer1
+    global idx1
     if flask.request.method == 'POST':
         user_answer = request.form['answer']
-        result = "Correct!" if user_answer == correct_answer else "Wrong!"
+        result = "Correct!" if user_answer == correct_answer1 else "Wrong!"
         idx_dict = {1: 'A', 2: 'B', 3: 'C', 4: 'D'}
-        return jsonify({'result': result, 'answer': idx_dict[idx+1]})
+        return jsonify({'result': result, 'answer': idx_dict[idx1+1]})
     else:
-        return correct_answer
+        return correct_answer1
+
+
+@app.route('/submit2', methods=['POST', 'GET'])
+def submit2():
+    global options2
+    global correct_answer2
+    global idx2
+    if flask.request.method == 'POST':
+        user_answer = request.form['answer']
+        result = "Correct!" if user_answer == correct_answer2 else "Wrong!"
+        idx_dict = {1: 'A', 2: 'B', 3: 'C', 4: 'D'}
+        return jsonify({'result': result, 'answer': idx_dict[idx2+1]})
+    else:
+        return options2[correct_answer2][0]
 
 
 if __name__ == "__main__":
