@@ -6,7 +6,6 @@ import Login from "../pages/Login";
 import Intro from "../pages/Intro";
 import Test from "../pages/Test";
 import Game3 from "../pages/Game3";
-import Card from "../pages/Card";
 
 const Content = () => {
   return (
@@ -31,10 +30,6 @@ const Content = () => {
         <Route
           path="/game3"
           element={<Game3 />}
-        />
-        <Route
-          path="/card"
-          element={<Card />}
         />
       </Routes>
     </div>
