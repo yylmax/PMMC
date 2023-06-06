@@ -18,12 +18,12 @@ import { useEffect, useState } from 'react'
 // export default Appgame3
 
 const cardImages = [
-  {"src": "img/Blue Whale.JPEG",matched: false },
-  {"src": "img/Dolphin.JPEG",matched: false },
-  {"src": "img/Hawaiian Monk Seal.JPEG",matched: false },
-  {"src": "img/Manatees.jpg",matched: false },
-  {"src": "img/Seal.JPEG",matched: false },
-  {"src": "img/Walrus.jpg",matched: false }
+  {"src": "static/img/Blue Whale.JPEG",matched: false },
+  {"src": "static/img/Dolphin.JPEG",matched: false },
+  {"src": "static/img/Hawaiian Monk Seal.JPEG",matched: false },
+  {"src": "static/img/Manatees.jpg",matched: false },
+  {"src": "static/img/Seal.JPEG",matched: false },
+  {"src": "static/img/Walrus.jpg",matched: false }
 ]
 
 function Appgame3() {

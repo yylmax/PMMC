@@ -10,7 +10,7 @@ const NavBar = () => {
           className="navbar-brand"
           href="#"
         >
-          PMPC
+          PMMC
         </a>
         <button
           className="navbar-toggler"
@@ -56,7 +56,16 @@ const NavBar = () => {
             <li className="nav-item">
               <a
                 className="nav-link"
-                href="/test"
+                href="/game1"
+              >
+                Game1
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="/game2"
               >
                 Game2
               </a>
