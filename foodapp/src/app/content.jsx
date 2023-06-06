@@ -5,7 +5,9 @@ import App from "../pages/App";
 import Login from "../pages/Login";
 import Intro from "../pages/Intro";
 import Test from "../pages/Test";
-import Game3 from "../pages/Game3";
+import Appgame3 from "../pages/Game3";
+
+
 
 const Content = () => {
   return (
@@ -27,11 +29,13 @@ const Content = () => {
           path="/test"
           element={<Test />}
         />
+
         <Route
           path="/game3"
-          element={<Game3 />}
+          element={<Appgame3 />}
         />
       </Routes>
+        
     </div>
   );
 };
