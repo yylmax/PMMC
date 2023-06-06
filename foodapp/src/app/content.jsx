@@ -5,8 +5,12 @@ import App from "../pages/App";
 import Login from "../pages/Login";
 import Intro from "../pages/Intro";
 import Test from "../pages/Test";
+
 import Appgame3 from "../pages/Game3";
 
+
+
+import Card from "../pages/Card";
 
 
 const Content = () => {
@@ -33,6 +37,10 @@ const Content = () => {
         <Route
           path="/game3"
           element={<Appgame3 />}
+        />
+        <Route
+          path="/card"
+          element={<Card />}
         />
       </Routes>
         

@@ -7,7 +7,7 @@
         font-family: Arial, sans-serif;
         padding: 20px;
         text-align: center;
-        background-image: url("static/media/WechatIMG2079.jpeg");
+        background-image: url("static/WechatIMG2079.jpeg");
         background-repeat: repeat-x;
         animation: slide 20s linear infinite;
       }
@@ -137,7 +137,7 @@
     <script>
       $(document).ready(function () {
         $.ajax({
-          url: "/submit",
+          url: "/submit1",
           type: "GET",
           success: function (response) {
             $("#answer-container").text(
@@ -171,7 +171,7 @@
           var answer = $('input[name="answer"]:checked').val();
           if (answer) {
             $.ajax({
-              url: "/submit",
+              url: "/submit1",
               method: "POST",
               data: { answer: answer },
               success: function (data) {
