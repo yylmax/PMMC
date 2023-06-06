@@ -50,12 +50,4 @@ UML with module description
 
 
 
-Software Design
-UML with module description
- liangchun uml.png
-- Author(s): Liangchun Ma
-- Descriptive Title: UML
-- Date Created: [5/31/2023]
-- Last Updated: [5/31/2023]
-- Status:  Active
 
