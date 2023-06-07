@@ -134,6 +134,8 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
+    <audio id="correct-sound" src="../static/asset/correct.mp3"></audio>
+    <audio id="wrong-sound" src="../static/asset/wrong.mp3"></audio>
     <script>
       $(document).ready(function () {
         $.ajax({
@@ -210,6 +212,13 @@
                 $("#result").text(
                   data.result + " Correct Answer is " + data.answer
                 );
+
+                 // Play sound effects based on the response
+                if (data.result === "Correct!") {
+                 document.getElementById("correct-sound").play();
+                } else {
+                 document.getElementById("wrong-sound").play();
+                }
               },
             });
           }

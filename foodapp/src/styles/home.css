@@ -52,4 +52,10 @@
     line-height: 24px;
   }
   
-  
+ img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 20px;
+} 

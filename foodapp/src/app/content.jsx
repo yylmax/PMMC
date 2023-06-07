@@ -42,8 +42,7 @@ const Content = () => {
           path="/card"
           element={<Card />}
         />
-      </Routes>
-        
+       </Routes> 
     </div>
   );
 };
