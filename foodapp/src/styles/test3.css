@@ -355,3 +355,8 @@ h1.with-margin-bottom {
 with-margin-bottom {
     margin-bottom: 20px;
 }
+
+#eduBody {
+    background-image: url("https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FydG9vbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60");
+    background-size: contain;
+}

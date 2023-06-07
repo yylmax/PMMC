@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import Point from "./Point";
 import Education from "./Education";
 import Card from "./Card";
+import "../styles/homepage.css";
 
 // const StyledDiv = styled.div`
 //   display: flex;
@@ -29,11 +30,11 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <div id="home">
       <Point />
       <Education />
       <Card />
-    </>
+    </div>
   );
 };
 
