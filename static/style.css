@@ -131,3 +131,21 @@
     color: #314b51 !important;
     display: none;
 }
+
+
+.backToMainBtn {
+  background-color: #305c64;
+  font-family: 'Dongle', sans-serif;
+  font-size: 20px;
+  color: #FFFAF4;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 3px 10px 3px 10px;
+  cursor: pointer;
+}
+  
+.backToMainBtn:hover {
+  background-color: #FFFAF4;
+  color:#305c64;
+}
