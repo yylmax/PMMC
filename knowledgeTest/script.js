@@ -12,6 +12,8 @@ const answers = ["Blue Whale", "Manatees", "Humpback Whale", "Dolphins", "Narwha
 const selectedQuestions = [];
 const selectedAnswers = [];
 
+var score = 0;
+
 const generateI = () => {
   let indexes = [];
   while (indexes.length < 5) {
@@ -40,7 +42,7 @@ function generateA(indexes) {
 };
 
 
-const newQ = () => {
+function newQ(num) {
   let indexes = generateI();
   let qs = generateQ(indexes);
   let as = generateA(indexes);
@@ -49,49 +51,50 @@ const newQ = () => {
     selectedQuestions.push(qs[i]);
     selectedAnswers.push(as[i]);
   }
+
   document.getElementById("startBtn").style.display = 'none';
   document.getElementById('factDisplay').innerHTML = selectedQuestions.splice(0,1);
-  document.getElementById('buttons').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='nextQ()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button><button id='copyText' class='copyText'>Copy fact</button><span id='copied'>Copied!</span>";
-  // prompt(selectedAnswers)
+  if (num === 1) {
+    document.getElementById('userInput').style.display = 'none';
+  } else {
+    document.getElementById('userInput').innerHTML = "<input type='text' id='answerInput' placeholder='Your answer...'>";
+  }
+  document.getElementById('buttons').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button>";
 };
 
 const restart = () => {
   alert('Restarted!');
-  newQ();
+  newQ(1);
+};
+
+const checkAnswer = () => {
+  const answer = selectedAnswers.splice(0,1);
+  const userAnswer = document.getElementById('answerInput').value;
+  if (userAnswer == answer) {
+    score += 20;
+    alert("Correct! You're doing great!");
+  } else {
+    alert("Nice try! That wasn't the correct answer, but keep going!");
+  }
+  document.getElementById('answerInput').value = '';
+  nextQ();
 };
 
 
 const nextQ = () => {
   if (selectedQuestions.length <= 0) {
-    document.getElementById('factDisplay').innerHTML = "Game Over! Your score is 100<br/><button type='button' class='generateBtn' onClick='window.location.reload()'>Let's Play Again!</button>";
+    const message = "Game Over! Your score is " + score + "<br/><button type='button' class='generateBtn' onClick='window.location.reload()'>Let's Play Again!</button>";
+    document.getElementById('factDisplay').innerHTML = message;
+    document.getElementById('userInput').style.display = 'none';
     document.getElementById("nextQBtn").style.display = 'none';
     document.getElementById("newBtn").style.display = 'none';
-    document.getElementById('copyText').style.display = 'none';
+    document.getElementById('checkText').style.display = 'none';
     selectedQuestions = [];
     selectedAnswers = [];
     return;
   }
   document.getElementById('factDisplay').innerHTML = selectedQuestions.splice(0,1);
+  document.getElementById('userInput').style.display = 'block';
+  document.getElementById('buttons').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button>";
   
-  // prompt(selectedQuestions.splice(0,1));
 };
-
-// Create copy button
-const copyBtn = document.getElementById('copyText');
-
-// Copy the fact
-const copiedFact = document.getElementById('copied');
-
-copyBtn.addEventListener('click', copyFact);
-
-async function copyFact () {
-  const fact = document.getElementById('factDisplay').innerHTML;
-
-  await navigator.clipboard.writeText(fact);
-
-  copiedFact.style.display = 'block';
-
-  setTimeout(() => {
-    copiedFact.style.visibility = 'hidden';
-  }, 2000);
-}
