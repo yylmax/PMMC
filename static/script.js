@@ -59,13 +59,9 @@ function newQ(num) {
   } else {
     document.getElementById('userInput987012').innerHTML = "<input type='text' id='answerInput' placeholder='Your answer...'>";
   }
-  document.getElementById('buttons12376').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button>";
+  document.getElementById('buttons12376').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onClick='window.location.reload()'>Restart!</button>";
 };
 
-const restart = () => {
-  alert('Restarted!');
-  newQ(1);
-};
 
 const checkAnswer = () => {
   const answer = selectedAnswers.splice(0,1);
@@ -95,6 +91,6 @@ const nextQ = () => {
   }
   document.getElementById('factDisplay').innerHTML = selectedQuestions.splice(0,1);
   document.getElementById('userInput987012').style.display = 'block';
-  document.getElementById('buttons12376').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button>";
+  document.getElementById('buttons12376').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onClick='window.location.reload()‘>Restart!</button>";
   
 };
