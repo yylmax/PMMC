@@ -78,6 +78,14 @@ const NavBar = () => {
                 Game3
               </a>
             </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="/game4"
+              >
+                Game4
+              </a>
+            </li>
           </ul>
         </div>
       </div>

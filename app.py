@@ -62,6 +62,10 @@ def game2():
 def game3():
     return app.send_static_file('index.html')
 
+@app.route('/game4')
+def game4():
+    return render_template('index.html')
+
 
 @app.route('/submit1', methods=['POST', 'GET'])
 def submit1():
