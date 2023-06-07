@@ -55,11 +55,11 @@ function newQ(num) {
   document.getElementById("startBtn").style.display = 'none';
   document.getElementById('factDisplay').innerHTML = selectedQuestions.splice(0,1);
   if (num === 1) {
-    document.getElementById('userInput').style.display = 'none';
+    document.getElementById('userInput987012').style.display = 'none';
   } else {
-    document.getElementById('userInput').innerHTML = "<input type='text' id='answerInput' placeholder='Your answer...'>";
+    document.getElementById('userInput987012').innerHTML = "<input type='text' id='answerInput' placeholder='Your answer...'>";
   }
-  document.getElementById('buttons').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button>";
+  document.getElementById('buttons12376').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button>";
 };
 
 const restart = () => {
@@ -85,7 +85,7 @@ const nextQ = () => {
   if (selectedQuestions.length <= 0) {
     const message = "Game Over! Your score is " + score + "<br/><button type='button' class='generateBtn' onClick='window.location.reload()'>Let's Play Again!</button>";
     document.getElementById('factDisplay').innerHTML = message;
-    document.getElementById('userInput').style.display = 'none';
+    document.getElementById('userInput987012').style.display = 'none';
     document.getElementById("nextQBtn").style.display = 'none';
     document.getElementById("newBtn").style.display = 'none';
     document.getElementById('checkText').style.display = 'none';
@@ -94,7 +94,7 @@ const nextQ = () => {
     return;
   }
   document.getElementById('factDisplay').innerHTML = selectedQuestions.splice(0,1);
-  document.getElementById('userInput').style.display = 'block';
-  document.getElementById('buttons').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button>";
+  document.getElementById('userInput987012').style.display = 'block';
+  document.getElementById('buttons12376').innerHTML = "<button class='generateBtn' id='nextQBtn' onclick='checkAnswer()'>Next question!</button><button class='newGameBtn' id='newBtn' onclick='restart()'>Restart!</button>";
   
 };
