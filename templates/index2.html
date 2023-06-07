@@ -163,7 +163,39 @@
       </label>
       {% endfor %}
     </div>
-    <button id="submit-btn">submit</button>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script>
+      function showDialog() {
+        var answer = $('input[name="answer"]:checked').val();
+        if (answer) {
+          $.ajax({
+            url: "/submit1",
+            method: "POST",
+            data: { answer: answer },
+            success: function (data) {
+              Swal.fire({
+                title: data.result + " Correct Answer is " + data.answer,
+                icon: "info",
+                showCancelButton: true,
+                confirmButtonText: "To Main Page",
+                cancelButtonText: "Next Question"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "/";
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                  location.reload();
+                }
+              });
+            },
+          });
+        }
+      }
+    </script>
+
+    <!-- <button id="submit-btn" onclick="showDialog()">submit</button> -->
+    <button onclick="showDialog()">submit</button>
+
     <div id="result"></div>
     <script>
       $(function () {
