@@ -125,11 +125,15 @@
   color: #356d77;
 }
 
-#checked {
-  font-family: 'Dongle', sans-serif;
-    font-size: 28px;
-    color: #314b51 !important;
+#correctAnswer {
     display: none;
+    font-size: 28px;
+    font-family: 'Dongle', sans-serif;
+    margin: 0;
+    padding-top: 10px;
+    line-height: 1;
+    text-align: center;
+    color: #314b51;
 }
 
 
