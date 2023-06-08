@@ -1,79 +1,114 @@
-  #kqboday823 {
-    background-color: #577D86;
-  }
-  
-  .kqbox {
-    background-color: rgb(246, 195, 145);
-    width: 70vw;
-    height: auto;
-    padding: 20px;
-    margin: 0 auto;
-    margin-top: 30px;
-    border-radius: 25px;
-    box-shadow: 10px 10px #E08E6D;
-    text-align: center;
-  }
-  
-  
-  #kqheader00893 {
-    font-size: 100px;
-    font-family: 'Baloo 2', cursive;
-    margin: 0;
-    padding-top: 10px;
-    line-height: 1;
-    text-align: center;
-    color: #314b51;
-  }
-
-  #kqintro-p14182 {
-    font-family: 'Dongle', sans-serif;
-    font-size: 28px; 
-    color: #314b51 !important;
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    line-height: 1;
-  }
-  
-  #factDisplay {
-    font-family: 'Dongle', sans-serif;
-    text-align: center;
-    font-size: 40px;
-    color: #314b51;
-    line-height: 0.8;
-    margin: 10px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-  }
-
-  #userInput987012 {
-    font-family: 'Dongle', sans-serif;
-    text-align: center;
-    font-size: 40px;
-    color: #314b51;
-    line-height: 0.8;
-    margin: 10px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-  }
-  #answerInput{
-  font-size: 20px;
-  width:50%;
-  padding: 10px;
-  margin: 5px;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-bottom-color: #577D86;
+#kqboday823 {
+  background-color: #577D86;
 }
-  
-  /* Button */
-  
+
+.kqbox {
+  background-color: rgb(246, 195, 145);
+  width: 70vw;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 25px;
+  box-shadow: 10px 10px #E08E6D;
+  text-align: center;
+}
+
+
+#kqheader00893 {
+  font-size: 100px;
+  font-family: 'Baloo 2', cursive;
+  margin: 0;
+  padding-top: 10px;
+  line-height: 1;
+  text-align: center;
+  color: #314b51;
+}
+
+#kqintro-p14182 {
+  font-family: 'Dongle', sans-serif;
+  font-size: 28px; 
+  color: #314b51 !important;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  line-height: 1;
+}
+
+#factDisplay {
+  font-family: 'Dongle', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: #314b51;
+  line-height: 0.8;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+#userInput987012 {
+  font-family: 'Dongle', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: #314b51;
+  line-height: 0.8;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+#answerInput{
+font-size: 20px;
+width:50%;
+padding: 10px;
+margin: 5px;
+border-left: 0;
+border-right: 0;
+border-top: 0;
+background-color: rgba(255, 255, 255, 0.2);
+border-bottom-color: #577D86;
+}
+
+/* Button */
+
 .generateBtn {
-  background-color: #314b51;
+background-color: #314b51;
+font-family: 'Dongle', sans-serif;
+font-size: 30px;
+color: #FFFAF4;
+text-align: center;
+border: none;
+border-radius: 10px;
+padding: 3px 10px 3px 10px;
+cursor: pointer;
+margin: 18px;
+}
+
+.generateBtn:hover {
+background-color: #FFFAF4;
+color:#314b51;
+}
+
+.newGameBtn {
+background-color: #305c64;
+font-family: 'Dongle', sans-serif;
+font-size: 30px;
+color: #FFFAF4;
+text-align: center;
+border: none;
+border-radius: 10px;
+padding: 3px 10px 3px 10px;
+cursor: pointer;
+}
+
+.newGameBtn:hover {
+background-color: #FFFAF4;
+color:#305c64;
+}
+
+.checkText {
+background-color: #356d77;
   font-family: 'Dongle', sans-serif;
   font-size: 30px;
   color: #FFFAF4;
@@ -84,68 +119,37 @@
   cursor: pointer;
   margin: 18px;
 }
-  
-.generateBtn:hover {
-  background-color: #FFFAF4;
-  color:#314b51;
-}
-
-.newGameBtn {
-  background-color: #305c64;
-  font-family: 'Dongle', sans-serif;
-  font-size: 30px;
-  color: #FFFAF4;
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-  padding: 3px 10px 3px 10px;
-  cursor: pointer;
-}
-  
-.newGameBtn:hover {
-  background-color: #FFFAF4;
-  color:#305c64;
-}
-
-.checkText {
-  background-color: #356d77;
-    font-family: 'Dongle', sans-serif;
-    font-size: 30px;
-    color: #FFFAF4;
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    padding: 3px 10px 3px 10px;
-    cursor: pointer;
-    margin: 18px;
-}
 
 .checkText:hover {
-  background-color: #FFFAF4;
-  color: #356d77;
+background-color: #FFFAF4;
+color: #356d77;
 }
 
-#checked {
+#correctAnswer {
+  display: none;
+  font-size: 28px;
   font-family: 'Dongle', sans-serif;
-    font-size: 28px;
-    color: #314b51 !important;
-    display: none;
+  margin: 0;
+  padding-top: 10px;
+  line-height: 1;
+  text-align: center;
+  color: #314b51;
 }
 
 
 .backToMainBtn {
-  background-color: #305c64;
-  font-family: 'Dongle', sans-serif;
-  font-size: 20px;
-  color: #FFFAF4;
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-  padding: 3px 10px 3px 10px;
-  cursor: pointer;
+background-color: #305c64;
+font-family: 'Dongle', sans-serif;
+font-size: 20px;
+color: #FFFAF4;
+text-align: center;
+border: none;
+border-radius: 10px;
+padding: 3px 10px 3px 10px;
+cursor: pointer;
 }
-  
+
 .backToMainBtn:hover {
-  background-color: #FFFAF4;
-  color:#305c64;
+background-color: #FFFAF4;
+color:#305c64;
 }
