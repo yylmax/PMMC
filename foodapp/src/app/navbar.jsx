@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+// This is the navigation bar components and each item represents the link to different pages in this webpage
 const NavBar = () => {
   return (
     <nav className="navbar bg-primary navbar-expand-lg bg-body-tertiary">

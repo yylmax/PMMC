@@ -4,12 +4,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import styles from "./Login.module.css"; // 导入样式表
+import styles from "./Login.module.css";
 import Axios from "axios";
 
+// Where users can login to the website and other component can get the user Id
 const Login = () => {
   const { register, getValues, handleSubmit } = useForm();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const [user, setUser] = useState(100);
 

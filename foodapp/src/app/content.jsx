@@ -8,11 +8,9 @@ import Test from "../pages/Test";
 
 import Appgame3 from "../pages/Game3";
 
-
-
 import Card from "../pages/Card";
 
-
+// There is the part of major content of the webpage, and with the use of the Routes, different pages will be displayed based on path
 const Content = () => {
   return (
     <div>
@@ -42,7 +40,7 @@ const Content = () => {
           path="/card"
           element={<Card />}
         />
-       </Routes> 
+      </Routes>
     </div>
   );
 };

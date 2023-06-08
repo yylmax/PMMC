@@ -13,8 +13,7 @@ import "../styles/homepage.css";
 //   flex-direction: column;
 // `;
 
-// 把index html挪到template文件夹
-
+// This component represents the homepage of the webpage, and this is what the user will see as they are redirected here.
 const App = () => {
   const { register, getValues, handleSubmit } = useForm();
 
