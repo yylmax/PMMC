@@ -4,7 +4,7 @@ Backend: app.py and store.py files. Python with flask.
 Frontend: All files in foodapp folder. Reactjs.
 
 
-# To run this project, be in the PMPC folder and use command "cd foodapp && npm run build && cd .. && python3 app.py", then click the output url.
+# To run this project, be in the PMMC folder and use command "cd frontend && npm run build && cd .. && python3 app.py", then click the output url.
 
 Requirements
 Functional Requirements:
