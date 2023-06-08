@@ -197,42 +197,16 @@
                   location.reload();
                 }
               });
+              if (data.result === "Correct!") {
+                document.getElementById("correct-sound").play();
+              } else {
+                document.getElementById("wrong-sound").play();
+              }
             },
           });
         }
       }
     </script>
-    <!-- <button id="submit-btn">submit</button> -->
     <button onclick="showDialog()">submit</button>
-
-
-
-    <div id="result"></div>
-    <script>
-      $(function () {
-        $("#submit-btn").click(function () {
-          var answer = $('input[name="answer"]:checked').val();
-          if (answer) {
-            $.ajax({
-              url: "/submit2",
-              method: "POST",
-              data: { answer: answer },
-              success: function (data) {
-                $("#result").text(
-                  data.result + " Correct Answer is " + data.answer
-                );
-
-                // Play sound effects based on the response
-                if (data.result === "Correct!") {
-                 document.getElementById("correct-sound").play();
-                } else {
-                 document.getElementById("wrong-sound").play();
-                }
-              },
-            });
-          }
-        });
-      });
-    </script>
   </body>
 </html>
