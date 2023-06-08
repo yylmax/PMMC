@@ -3,7 +3,7 @@ import saveImage from "../assets/save.png";
 import bagImage from "../assets/hhhh.jpg";
 import familyImage from "../assets/family.png";
 
-
+// This is the component that click to navigate to other websites to learn more about protecting animals
 const Card = () => {
   return (
     <div>
@@ -16,19 +16,24 @@ const Card = () => {
         <div class="card">
           <figure class="card__thumb">
             <img
-              id="save" src={saveImage} alt="Image 1"
+              id="save"
+              src={saveImage}
+              alt="Image 1"
               class="card__image"
             />
             <figcaption class="card__caption">
-              <h2 class="card__title">Reduce Pollution and Plastic Waste</h2>
+              <h2 class="card__title1">Reduce Pollution and Plastic Waste</h2>
               <p class="card__snippet">
-                One aspect of marine mammal conservation is reducing pollution and plastic waste in our oceans. 
-                Encourage individuals to adopt eco-friendly practices such as minimizing the use of single-use plastics, 
-                properly disposing of waste, and participating in beach clean-up activities. By reducing pollution and plastic waste, 
-                we can create cleaner and healthier habitats for marine mammals, reducing the risk of ingestion and entanglement.
+                One aspect of marine mammal conservation is reducing pollution
+                and plastic waste in our oceans. Encourage individuals to adopt
+                eco-friendly practices such as minimizing the use of single-use
+                plastics, properly disposing of waste, and participating in
+                beach clean-up activities. By reducing pollution and plastic
+                waste, we can create cleaner and healthier habitats for marine
+                mammals, reducing the risk of ingestion and entanglement.
               </p>
               <a
-                href=""
+                href="https://www.oceanicsociety.org/resources/7-ways-to-reduce-ocean-plastic-pollution-today/"
                 class="card__button"
               >
                 Read more
@@ -40,46 +45,55 @@ const Card = () => {
         <div class="card">
           <figure class="card__thumb">
             <img
-              id="bag" src={bagImage} alt="Image 2" 
-              class="card__image"
-            />
-            <figcaption class="card__caption">
-              <h2 class="card__title">Reduce Pollution and Plastic Waste</h2>
-              <p class="card__snippet">
-                One aspect of marine mammal conservation is reducing pollution and plastic waste in our oceans. 
-                Encourage individuals to adopt eco-friendly practices such as minimizing the use of single-use plastics, 
-                properly disposing of waste, and participating in beach clean-up activities. By reducing pollution and plastic waste, 
-                we can create cleaner and healthier habitats for marine mammals, reducing the risk of ingestion and entanglement.
-              </p>
-              <a
-                href=""
-                class="card__button"
-              >
-                Read more
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="card">
-          <figure class="card__thumb">
-            <img
-              id="family" src={familyImage} alt="Image 3"
+              id="bag"
+              src={bagImage}
+              alt="Image 2"
               class="card__image"
             />
             <figcaption class="card__caption">
               <h2 class="card__title1">
-                Promote Sustainable Fishing Practices:
+                Official guide to protect Marine Mammals
               </h2>
               <p class="card__snippet">
-                Promoting sustainable fishing practices is crucial for the well-being of marine mammals. 
-                Encourage individuals to support sustainable seafood choices, such as consuming responsibly 
-                sourced fish and avoiding species that are overfished or caught using destructive methods. 
-                By supporting sustainable fishing practices, we can maintain a balanced ecosystem and ensure 
-                an adequate food supply for marine mammals.
+                One aspect of marine mammal conservation is reducing pollution
+                and plastic waste in our oceans. Encourage individuals to adopt
+                eco-friendly practices such as minimizing the use of single-use
+                plastics, properly disposing of waste, and participating in
+                beach clean-up activities. By reducing pollution and plastic
+                waste, we can create cleaner and healthier habitats for marine
+                mammals, reducing the risk of ingestion and entanglement.
               </p>
               <a
-                href=""
+                href="https://www.fisheries.noaa.gov/topic/marine-mammal-protection"
+                class="card__button"
+              >
+                Read more
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <figure class="card__thumb">
+            <img
+              id="family"
+              src={familyImage}
+              alt="Image 3"
+              class="card__image"
+            />
+            <figcaption class="card__caption">
+              <h2 class="card__title1">Marine Mammals General Info</h2>
+              <p class="card__snippet">
+                Promoting sustainable fishing practices is crucial for the
+                well-being of marine mammals. Encourage individuals to support
+                sustainable seafood choices, such as consuming responsibly
+                sourced fish and avoiding species that are overfished or caught
+                using destructive methods. By supporting sustainable fishing
+                practices, we can maintain a balanced ecosystem and ensure an
+                adequate food supply for marine mammals.
+              </p>
+              <a
+                href="https://www.marinemammalcenter.org/animal-care/learn-about-marine-mammals"
                 class="card__button"
               >
                 Read more

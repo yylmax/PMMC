@@ -9,6 +9,7 @@ import bagImage from "../assets/hhhh.jpg";
 import familyImage from "../assets/family.png";
 import helpImage from "../assets/bag.png";
 
+// This is the component for display context about how to protect animals
 const Education = () => {
   return (
     <html>

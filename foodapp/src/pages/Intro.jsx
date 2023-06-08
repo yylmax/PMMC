@@ -6,6 +6,7 @@ import "../styles/list.css";
 import introImage from "../assets/pic1.JPG";
 import sound from "../assets/ocean.mp3";
 
+// This component represents the introduction page
 const Intro = () => {
   return (
     <div>

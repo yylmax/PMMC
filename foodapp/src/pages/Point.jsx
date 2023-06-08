@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/point.css";
 
+// This is a small component for displaying the login user information and point information.
 const Point = () => {
   const [user, setUser] = useState();
   const [userPoint, setUserPoint] = useState(0);
