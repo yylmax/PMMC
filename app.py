@@ -23,9 +23,9 @@ def index():
 def Userlogin():
     if flask.request.method == 'POST':
         userName = request.args.get("username")
-    else:
-        userName = request.form["username"]
-        print('2. username: ', userName)
+    #else:
+        #userName = request.form["username"]
+        #print('2. username: ', userName)
     return app.send_static_file('index.html')
 
 
