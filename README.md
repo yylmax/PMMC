@@ -1,6 +1,6 @@
 # Interactive Kids Game Website
 
-Backend: app.py and store.py files. Python with flask.
+Backend: app.py, game1.py, game2.py and store.py files. Python with Flask.
 Frontend: All files in foodapp folder. Reactjs.
 
 
@@ -41,7 +41,7 @@ Report Issue. This use case represents the functionality for users to report iss
 
 Software Design
 UML with module description
- l[iangchun uml.png](https://drive.google.com/file/d/1g7ExoadMaVA1SQzPVbTzE3ls6-yuK_N9/view?usp=sharing)
+ [liangchun uml.png](https://drive.google.com/file/d/1g7ExoadMaVA1SQzPVbTzE3ls6-yuK_N9/view?usp=sharing)
 - Author(s): Liangchun Ma
 - Descriptive Title: UML
 - Date Created: [5/31/2023]
