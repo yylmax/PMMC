@@ -1,4 +1,8 @@
 import "../styles/card.css";
+import saveImage from "../assets/save.png";
+import bagImage from "../assets/hhhh.jpg";
+import familyImage from "../assets/family.png";
+
 
 const Card = () => {
   return (
@@ -12,16 +16,16 @@ const Card = () => {
         <div class="card">
           <figure class="card__thumb">
             <img
-              src="https://source.unsplash.com/71u2fOofI-U/300x510"
-              alt="Picture by Nathan Dumlao"
+              id="save" src={saveImage} alt="Image 1"
               class="card__image"
             />
             <figcaption class="card__caption">
-              <h2 class="card__title">This Is Your Body And Brain On Coffee</h2>
+              <h2 class="card__title">Reduce Pollution and Plastic Waste</h2>
               <p class="card__snippet">
-                Drinking more caffeine during the coronavirus lockdown? Here's
-                how it can affect you over time and advice on making it better
-                for you.
+                One aspect of marine mammal conservation is reducing pollution and plastic waste in our oceans. 
+                Encourage individuals to adopt eco-friendly practices such as minimizing the use of single-use plastics, 
+                properly disposing of waste, and participating in beach clean-up activities. By reducing pollution and plastic waste, 
+                we can create cleaner and healthier habitats for marine mammals, reducing the risk of ingestion and entanglement.
               </p>
               <a
                 href=""
@@ -36,20 +40,43 @@ const Card = () => {
         <div class="card">
           <figure class="card__thumb">
             <img
-              src="https://source.unsplash.com/qXMpNtNp1uE/300x510"
-              alt="Picture by Daniel Lincoln"
+              id="bag" src={bagImage} alt="Image 2" 
+              class="card__image"
+            />
+            <figcaption class="card__caption">
+              <h2 class="card__title">Reduce Pollution and Plastic Waste</h2>
+              <p class="card__snippet">
+                One aspect of marine mammal conservation is reducing pollution and plastic waste in our oceans. 
+                Encourage individuals to adopt eco-friendly practices such as minimizing the use of single-use plastics, 
+                properly disposing of waste, and participating in beach clean-up activities. By reducing pollution and plastic waste, 
+                we can create cleaner and healthier habitats for marine mammals, reducing the risk of ingestion and entanglement.
+              </p>
+              <a
+                href=""
+                class="card__button"
+              >
+                Read more
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <figure class="card__thumb">
+            <img
+              id="family" src={familyImage} alt="Image 3"
               class="card__image"
             />
             <figcaption class="card__caption">
               <h2 class="card__title1">
-                Why You Should Bring Your Dog To Work
+                Promote Sustainable Fishing Practices:
               </h2>
               <p class="card__snippet">
-                On Friday, offices around the country celebrated the 15th annual
-                Take Your Dog to Work Day. Though the event's primary goal is to
-                raise awareness for pet adoption, the unanticipated impact may
-                be a slightly more relaxing work environment for any office
-                choosing to participate.
+                Promoting sustainable fishing practices is crucial for the well-being of marine mammals. 
+                Encourage individuals to support sustainable seafood choices, such as consuming responsibly 
+                sourced fish and avoiding species that are overfished or caught using destructive methods. 
+                By supporting sustainable fishing practices, we can maintain a balanced ecosystem and ensure 
+                an adequate food supply for marine mammals.
               </p>
               <a
                 href=""

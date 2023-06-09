@@ -3,7 +3,7 @@ import json
 from collections import defaultdict
 
 
-# 这里需要大改，每个user需要自己对应的point
+'''
 def checkExistence(query,userName):
     root = os.getcwd()
     directory = "FoodSearched"
@@ -18,10 +18,10 @@ def checkExistence(query,userName):
     return bool(os.path.exists(result_path))
 
 
-def storeFood(json_file, query,userName):
+def storeUser(json_file, query,userName):
     print(json_file)
     root = os.getcwd()
-    directory = "FoodSearched"
+    directory = "Users"
     path = os.path.join(root, directory)
     if not os.path.exists(path):
         os.mkdir(path)
@@ -100,3 +100,4 @@ def addLike(id, userName, query):
     with open(result_path, "w", encoding = 'utf-8') as idx:
         json.dump(result_dict, idx, indent = 4)
     return FLAG
+'''

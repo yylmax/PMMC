@@ -13,20 +13,23 @@ app = Flask(__name__)
             #, static_url_path='', static_folder='static', template_folder='templates')
 CORS(app)
 
+
 @app.route("/")
 def index():
     return app.send_static_file('index.html')
 
-@app.route("/login", methods=["POST"])
-def indexlogin():
-    userName = request.args.get("username")
-    return app.send_static_file('index.html')
 
-@app.route("/login", methods=["GET"])
+@app.route("/login", methods=["POST", "GET"])
 def Userlogin():
+    if flask.request.method == 'POST':
+        userName = request.args.get("username")
+    #else:
+        #userName = request.form["username"]
+        #print('2. username: ', userName)
     return app.send_static_file('index.html')
 
-@app.route("/intro", methods=["GET"])
+
+@app.route("/intro")
 def UserIntro():
     return app.send_static_file('index.html')
 
@@ -61,6 +64,10 @@ def game2():
 @app.route('/game3')
 def game3():
     return app.send_static_file('index.html')
+
+@app.route('/game4')
+def game4():
+    return render_template('index.html')
 
 
 @app.route('/submit1', methods=['POST', 'GET'])

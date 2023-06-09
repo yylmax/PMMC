@@ -7,6 +7,7 @@ class Game2:
         self.idx = 0
         
     def game2_backend(self):
+        # data of animals
         animal_dict = {
             'Bottlenose Dolphin': ['static/asset/dolphin-noise-6968.mp3', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQRva8pjNAqCoaG7xIo6cSyTWqoLjnYIUVkzPqrmCY3xECGaiZn_r_Iw7kMCGR7R_snxxAxRjO7RhlDkR8'],
             'Killer Whale': ['static/asset/Whale.mp3', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR43BPry8TMW5Z0EQKmucruTKiq-NfJymzd7EhqrSQHaQlOw54TLrFv52pOoe8Mdlz35GGCZspM8vpiBoo'],
@@ -23,10 +24,12 @@ class Game2:
         }
 
         animals = list(animal_dict.keys())
+        #Selects 4 random animal names from the animals list using the random.sample() function.
         random_elements = random.sample(animals, 4)
         question_dict = {
             i[0]: i[1] for i in animal_dict.items() if i[0] in random_elements
         }
+        #Converts the key-value pairs of question_dict into a list of tuples.
         items = list(question_dict.items())
         random.shuffle(items)
         self.options = dict(items)
