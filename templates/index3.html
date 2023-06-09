@@ -2,16 +2,22 @@
 <html>
   <head>
     <style type="text/css">
+      html {
+        height: 100%;
+      }
+
       /* Sets the background color of the body */
       body {
+        display: block;
         background-color: #f5f5f5;
         font-family: Arial, sans-serif;
-        padding: 20px;
         text-align: center;
-        background-image: url("static/a1.jpg");
+        background-image: url("static/a2.jpg");
         background-repeat: repeat-x;
         animation: slide 20s linear infinite;
+        height: 100%;
       }
+
       @keyframes slide {
         0% {
           background-position: 0 0; /* Sets the initial background position of the sliding animation */
@@ -23,9 +29,9 @@
       
       h1 {
         margin-top: 0;
-        font-size: 36px;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        text-shadow: 2px 2px 4px #000000;
+        font-size: 2.3rem;
+        font-family: 'Impact', cursive, sans-serif;
+        color: #13274F;
       }
       /*
       #options {
@@ -52,11 +58,18 @@
       }
       */
     
+      .option-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
       #options {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 20px;
+        width: 600px;
       }
       
       label {
@@ -79,8 +92,8 @@
       
       
       img {
-        width: 200px;
-        height: 200px;
+        width: 170px;
+        height: 170px;
         object-fit: cover;
         display: block;
         border-radius: 5px;
@@ -94,7 +107,7 @@
     
     
     button {
-      background-color: #008CBA;
+      background-color: #367588;
       border: none;
       color: white;
       padding: 10px 20px;
@@ -129,7 +142,28 @@
       #result {
         font-size: 24px;
         margin-top: 20px;
-      }    
+      }
+
+      .page-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 97%;
+      }
+
+      .content-container {
+        box-sizing: border-box;
+        border: solid;
+        border-color: #B9D9EB;
+        background-color: #ADD8E6;
+        border-radius: 2%;
+        padding: 1.7rem;
+      }
+
+      .option-radio-button {
+        visibility: hidden;
+      }
+
     </style>
     <title>Python webgame</title>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -147,16 +181,16 @@
             // Executes when the request is successful
             var soundUrl = response;
     
-            $("#answer-container").text("Please select the image that matches the sound");
+            $("#answer-container").text("Select the image that matches the sound");
     
             var soundButton = $("<button>")
-              .text("Play Sound")
+              .text("Play Sound 🎧")
               .click(function () {
                 // Plays the sound when the button is clicked
                 var audio = new Audio(soundUrl);
                 audio.play();
               });
-            $("#answer-container").append(soundButton);
+            soundButton.insertAfter($("#answer-container"));
           },
           error: function (error) {
             // Executes when there is an error in the request
@@ -165,19 +199,27 @@
         });
       });
     </script>
-    <h1 id="answer-container"></h1>
-    <div id="options">
-      {% for key, value in options.items() %}
-      <label>
-        <input
-          type="radio"
-          name="answer"
-          value="{{ key }}"
-        />
-        <img src="{{ value[1] }}" />
-      </label>
-      {% endfor %}
-    </div>
+    <div class="page-container">
+      <div class="content-container">
+        <h1 id="answer-container"></h1>
+        <div class="option-container">
+          <div id="options">
+            {% for key, value in options.items() %}
+            <label>
+              <input
+                class="option-radio-button"
+                type="radio"
+                name="answer"
+                value="{{ key }}"
+              />
+              <img src="{{ value[1] }}" />
+            </label>
+            {% endfor %}
+          </div>
+        </div>
+        <button onclick="showDialog()">Submit</button>
+      </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
     <script>
@@ -216,6 +258,5 @@
         }
       }
     </script>
-    <button onclick="showDialog()">submit</button>
   </body>
 </html>

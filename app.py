@@ -92,7 +92,7 @@ def submit2():
     if flask.request.method == 'POST':
         user_answer = request.form['answer']
         result = "Correct!" if user_answer == correct_answer2 else "Wrong!"
-        idx_dict = {1: 'A', 2: 'B', 3: 'C', 4: 'D'}
+        idx_dict = {1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E', 6: 'F'}
         return jsonify({'result': result, 'answer': idx_dict[idx2+1]})
     else:
         return options2[correct_answer2][0]
