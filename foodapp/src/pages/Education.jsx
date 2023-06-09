@@ -4,10 +4,10 @@ import "../styles/test3.css";
 import character1Image from "../assets/h1.png";
 import character2Image from "../assets/h2.png";
 import character3Image from "../assets/h3.png";
-import saveImage from "../assets/save.png";
-import bagImage from "../assets/hhhh.jpg";
-import familyImage from "../assets/family.png";
-import helpImage from "../assets/bag.png";
+import saveImage from "../assets/back1.jpg";
+import bagImage from "../assets/back2.jpg";
+import familyImage from "../assets/back3.jpg";
+import helpImage from "../assets/back4.jpg";
 
 // This is the component for display context about how to protect animals
 const Education = () => {
@@ -15,6 +15,7 @@ const Education = () => {
     <html>
       <body id="eduBody">
         <div className="container">
+          {/* Introduction */}
           <h1 className="title with-margin-bottom">
             Interactive Mini Games for Kids
           </h1>
@@ -40,7 +41,7 @@ const Education = () => {
             endangering their survival. It is our responsibility to take action
             and protect these incredible creatures and their habitats.
           </p>
-
+          {/* Displaying Images */}
           <div class="wp-block-image">
             <figure class="aligncenter size-full">
               <img
@@ -136,6 +137,7 @@ const Education = () => {
                   <p></p>
                 </div>
               </div>
+              {/*Section: Actions To Protect Marine Mammals*/}
               <h2 class="wp-block-heading">
                 Actions To Protect Marine Mammals
               </h2>
@@ -177,7 +179,7 @@ const Education = () => {
               </div>
             </div>
           </div>
-
+          {/*characters dialogue*/}
           <div className="dialogue-container">
             <div className="character-container">
               <div className="character">
@@ -191,28 +193,13 @@ const Education = () => {
             </div>
             <div className="dialogue">
               <div className="message">
-                "Humans have hurt the ocean home of marine mammals. Now all of
-                us must help fix it!"
-              </div>
-              <div className="message">
-                "Let me tell you some things you can do to make marine mammals
-                safer and happier."
-              </div>
-              <div className="message">
-                <span className="highlight">
-                  Unplug electronics and turn off lights
-                </span>{" "}
-                when you aren't using them. This helps reduce climate change and
-                keep the planet cooler!
-              </div>
-              <div className="message">
-                <span className="highlight">
-                  Keep ocean animals safe from litter!
-                </span>{" "}
-                Do a beach cleanup with your family or friends. Keep garbage out
-                of the ocean by using a reusable lunch box/water bottle.
-              </div>
-            </div>
+                "Humans have hurt the ocean home of marine mammals. 
+                Let me tell you some things we can do to make marine mammals
+                safer and happier. 
+                <div>Unplug electronics and turn off lights when you aren't using them. This helps reduce climate change and
+                keep the planet cooler!"</div>
+                <div>1.Keep ocean animals safe from litter. Do a beach cleanup with your family or friends. Keep garbage out
+                of the ocean by using a reusable lunch box/water bottle.</div>
             <div className="character-container">
               <div className="character">
                 <img
@@ -251,17 +238,10 @@ const Education = () => {
             </div>
             <div className="dialogue">
               <div className="message">
-                "That's great advice! We can also{" "}
-                <span className="highlight">encourage our family</span> to
-                carpool, ride bikes, or walk places to keep the planet cooler
-                and the ocean cleaner!"
-              </div>
-              <div className="message">
-                "And we can{" "}
-                <span className="highlight">create a club at school</span> that
-                helps people learn about the ocean, do beach cleanups, or raise
-                money and supplies for organizations that protect marine mammals
-                like PMMC!"
+                "I recently read about the impact of overfishing on marine mammal populations.
+                When their food sources decline, it affects their survival and overall ecosystem balance.
+                Promoting sustainable fishing practices and responsible seafood consumption can make a positive impact."
+            
               </div>
             </div>
 
@@ -277,17 +257,15 @@ const Education = () => {
             </div>
             <div className="dialogue">
               <div className="message">
-                "That's great advice! We can also{" "}
-                <span className="highlight">encourage our family</span> to
-                carpool, ride bikes, or walk places to keep the planet cooler
+                "Did you know that marine mammals, like dolphins and whales, are highly intelligent creatures?"{" "}
+                <span className="highlight"> They have complex social structures and communicate through various vocalizations.
+                </span> It's fascinating how they navigate the vast ocean and play important roles in maintaining marine ecosystems.
                 and the ocean cleaner!"
               </div>
               <div className="message">
-                "And we can{" "}
-                <span className="highlight">create a club at school</span> that
-                helps people learn about the ocean, do beach cleanups, or raise
-                money and supplies for organizations that protect marine mammals
-                like PMMC!"
+                "We need to protect the ocean to ensure the survival of marine mammals. 
+                Absolutely! Pollution and habitat destruction are major threats to their existence. 
+                By reducing our carbon footprint and supporting sustainable practices, we can make a difference."
               </div>
             </div>
 
@@ -303,32 +281,25 @@ const Education = () => {
             </div>
             <div className="dialogue">
               <div className="message">
-                "That's great advice! We can also{" "}
-                <span className="highlight">encourage our family</span> to
-                carpool, ride bikes, or walk places to keep the planet cooler
-                and the ocean cleaner!"
-              </div>
-              <div className="message">
-                "And we can{" "}
-                <span className="highlight">create a club at school</span> that
-                helps people learn about the ocean, do beach cleanups, or raise
-                money and supplies for organizations that protect marine mammals
-                like PMMC!"
+                "TI heard that noise pollution from ships and sonar systems can be harmful to marine mammals.
+                It disrupts their communication and navigation abilities, leading to stranding and injury.
+                We should advocate for stricter regulations to minimize these disturbances!"
               </div>
             </div>
 
+            {/* some links for protect marine animals */}
             <div class="kb-table-of-contents-title-wrap kb-toggle-icon-style-arrow">
               <span class="kb-table-of-contents-title">
                 Links to learn more about marine mammals
               </span>
             </div>
-            <ul class="kb-table-of-content-list kb-table-of-content-list-columns-1 kb-table-of-content-list-style-disc kb-table-of-content-link-style-underline">
+            <ul class="https://www.marinebio.org/creatures/marine-vertebrates/marine-mammals/">
               <li>
                 <a
                   class="kb-table-of-contents__entry"
                   href="#how-to-teach-science"
                 >
-                  How To Teach Science
+                  What Is Marine Mammal
                 </a>
               </li>
               <li>
@@ -336,7 +307,7 @@ const Education = () => {
                   class="kb-table-of-contents__entry"
                   href="#easy-science-projects-to-try"
                 >
-                  Easy Science Projects To Try
+                  How Can People Help Marine Mammal
                 </a>
               </li>
             </ul>
@@ -344,10 +315,12 @@ const Education = () => {
 
           <div class="fl-module-content fl-node-content">
             <h1 class="fl-heading">
-              <span class="fl-heading-text">Who's the Club for?</span>
+              <span class="fl-heading-text">Join Our Club</span>
             </h1>
           </div>
         </div>
+        </div> 
+        </div>  
       </body>
     </html>
   );

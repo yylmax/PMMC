@@ -29,8 +29,8 @@ const App = () => {
   }, []);
 
   return (
+    //<Point /> 
     <div id="home">
-      <Point />
       <Education />
       <Card />
     </div>

@@ -2,18 +2,19 @@
 <html>
   <head>
     <style type="text/css">
+      /* Sets the background color of the body */
       body {
         background-color: #f5f5f5;
         font-family: Arial, sans-serif;
         padding: 20px;
         text-align: center;
-        background-image: url("static/WechatIMG2079.jpeg");
+        background-image: url("static/a1.jpg");
         background-repeat: repeat-x;
         animation: slide 20s linear infinite;
       }
       @keyframes slide {
         0% {
-          background-position: 0 0;
+          background-position: 0 0; /* Sets the initial background position of the sliding animation */
         }
         100% {
           background-position: -2000px 0;
@@ -138,23 +139,27 @@
     <audio id="wrong-sound" src="../static/asset/wrong.mp3"></audio>
     <script>
       $(document).ready(function () {
+        // Executes when the document is ready
         $.ajax({
           url: "/submit2",
           type: "GET",
           success: function (response) {
+            // Executes when the request is successful
             var soundUrl = response;
     
-            $("#answer-container").text("Please select the image of");
+            $("#answer-container").text("Please select the image that matches the sound");
     
             var soundButton = $("<button>")
               .text("Play Sound")
               .click(function () {
+                // Plays the sound when the button is clicked
                 var audio = new Audio(soundUrl);
                 audio.play();
               });
             $("#answer-container").append(soundButton);
           },
           error: function (error) {
+            // Executes when there is an error in the request
             console.log(error);
           },
         });
@@ -180,10 +185,12 @@
         var answer = $('input[name="answer"]:checked').val();
         if (answer) {
           $.ajax({
+            // Sends a POST request to the "/submit2" endpoint
             url: "/submit2",
             method: "POST",
+            // Sends the selected answer as data
             data: { answer: answer },
-            success: function (data) {
+            success: function (data) { 
               Swal.fire({
                 title: data.result + " Correct Answer is " + data.answer,
                 icon: "info",
@@ -192,11 +199,13 @@
                 cancelButtonText: "Next Question"
               }).then((result) => {
                 if (result.isConfirmed) {
+                  // Redirects to the main page when confirmed
                   window.location.href = "/";
                 } else if (result.dismiss === Swal.DismissReason.cancel) {
                   location.reload();
                 }
               });
+              // Plays sound effects
               if (data.result === "Correct!") {
                 document.getElementById("correct-sound").play();
               } else {
