@@ -34,13 +34,7 @@ const Education = () => {
             endangering their survival. It is our responsibility to take action
             and protect these incredible creatures and their habitats.
           </p>
-          <p class="has-text-align-left">
-            However, the ocean home of marine mammals is facing significant
-            threats due to human activities. Pollution, climate change, habitat
-            destruction, overfishing, and disturbance from human presence are
-            endangering their survival. It is our responsibility to take action
-            and protect these incredible creatures and their habitats.
-          </p>
+
           {/* Displaying Images */}
           <div class="wp-block-image">
             <figure class="aligncenter size-full">
