@@ -24,8 +24,8 @@ class Game2:
         }
 
         animals = list(animal_dict.keys())
-        #Selects 4 random animal names from the animals list using the random.sample() function.
-        random_elements = random.sample(animals, 4)
+        #Selects 6 random animal names from the animals list using the random.sample() function.
+        random_elements = random.sample(animals, 6)
         question_dict = {
             i[0]: i[1] for i in animal_dict.items() if i[0] in random_elements
         }
@@ -33,7 +33,7 @@ class Game2:
         items = list(question_dict.items())
         random.shuffle(items)
         self.options = dict(items)
-        self.idx = random.randint(0, 3)
+        self.idx = random.randint(0, 5)
         self.correct_answer = list(self.options.keys())[self.idx]
 
         return self.options, self.correct_answer, self.idx
